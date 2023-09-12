@@ -5,7 +5,7 @@ FROM python:3
 WORKDIR /app
 
 # Скопируйте файл index.html внутрь контейнера
-COPY index.html /app/
+COPY homework.html /app/
 
 # Запуск web-сервера на порту 8000 и отдача содержимого /app
 CMD ["python", "-m", "http.server", "8000"]
