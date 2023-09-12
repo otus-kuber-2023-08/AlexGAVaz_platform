@@ -4,11 +4,8 @@ FROM python:3
 # Создайте рабочую директорию внутри контейнера
 WORKDIR /app
 
-# Скопируйте файл index.html внутрь контейнера
+# Скопируйте файл homework.html внутрь контейнера
 COPY homework.html /app/
-
-# Запуск web-сервера на порту 8000 и отдача содержимого /app
-CMD ["python", "-m", "http.server", "8000"]
 
 # Установка UID для запускающего пользователя (1001)
 RUN useradd -u 1001 -r -g 0 -d /app -s /sbin/nologin -c "Default Application User" default-user
@@ -21,3 +18,4 @@ USER 1001
 
 # Откройте порт 8000 для внешних подключений
 EXPOSE 8000
+

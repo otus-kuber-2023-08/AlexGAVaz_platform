@@ -8,6 +8,8 @@ spec:
   containers:
   - name: web-container
     image: alexgavaz/web:v1
+    ports:
+      - containerPort: 8000
   initContainers:
   - name: init-container
     image: busybox:1.31.0
@@ -18,4 +20,5 @@ spec:
   volumes:
     - name: app
       emptyDir: { }
+
 
