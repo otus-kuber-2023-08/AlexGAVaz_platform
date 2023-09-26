@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: paymentservice-deployment-bg
 spec:
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
       app: paymentservice
